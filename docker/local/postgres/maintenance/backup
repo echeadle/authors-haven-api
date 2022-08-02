@@ -2,7 +2,7 @@
 
 set -o errexit
 set -o pipefail
-set -0 nounset
+set -o nounset
 
 working_dir="$(dirname ${0}"
 source "${working_dir}/_sourced/constants.sh"

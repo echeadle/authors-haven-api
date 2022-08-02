@@ -2,7 +2,7 @@
 
 set -o errexit
 set -o pipefail
-set -0 nounset
+set -o nounset
 
 python3 manage.py migrate --no-input
 python3 manage.py collectstatic --no-input
