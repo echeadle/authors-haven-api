@@ -5,7 +5,13 @@
 staticfiles
 .envs/*
 !.envs/.local/
-
+base2.py
+urls2.py
+managers2.py
+Dockerfile2
+_local2.yml
+*.swap
+backup2
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

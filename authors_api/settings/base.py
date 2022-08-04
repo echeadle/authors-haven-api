@@ -1,8 +1,7 @@
-
-
+from datetime import timedelta
 from pathlib import Path
-import environ
 
+import environ
 
 env = environ.Env()
 
@@ -11,7 +10,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 APPS_DIR = ROOT_DIR / "core_apps"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool("DJANGO_DEBUG", "False")
+DEBUG = env.bool("DJANGO_DEBUG", False)
 
 # Application definition
 
@@ -22,8 +21,7 @@ DJANGO_APPS = [
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.admin',
-    
+    'django.contrib.admin',   
 ]
 
 
@@ -148,6 +146,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_URLS_REGEX = r"^/api/.*$"
 
+AUTH_USER_MODEL = 'users.User'
+
 LOGGING ={
     'version':1,
     'disable_existing_loggers':False,
@@ -165,5 +165,5 @@ LOGGING ={
 
         }
     },
-    'root':{'level':'INFO', 'handlers':['console']},
+    'root': {'level': 'INFO', 'handlers':['console']},
 }
